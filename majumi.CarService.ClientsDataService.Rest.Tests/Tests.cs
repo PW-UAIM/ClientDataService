@@ -18,12 +18,12 @@ public class Tests : ITestsService
 
         try
         {
-            IMechanicCollection mechanicCollection = new MechanicCollection();
+            IClientCollection clientCollection = new ClientCollection();
 
-            Mechanic[] mechanics1 = mechanicCollection.GetAllMechanics();
-            MechanicData[] mechanics2 = GetMechanics(host, (ushort)port);
+            Client[] clients1 = clientCollection.GetAllClients();
+            ClientData[] clients2 = GetClients(host, (ushort)port);
 
-            Debug.Assert(condition: mechanics1.Length == mechanics2.Length);
+            Debug.Assert(condition: clients1.Length == clients2.Length);
         }
         catch (Exception e)
         {
@@ -32,9 +32,9 @@ public class Tests : ITestsService
         return "No errors";
     }
 
-    private MechanicData[] GetMechanics(string webServiceHost, ushort webServicePort)
+    private ClientData[] GetClients(string webServiceHost, ushort webServicePort)
     {
-        string webServiceUri = string.Format("https://{0}:{1}/allMechanics", webServiceHost, webServicePort);
+        string webServiceUri = string.Format("https://{0}:{1}/allClients", webServiceHost, webServicePort);
 
         Task<string> webServiceCall = CallWebService(HttpMethod.Get, webServiceUri);
 
@@ -42,9 +42,9 @@ public class Tests : ITestsService
 
         string jsonResponseContent = webServiceCall.Result;
 
-        MechanicData[] mechanics = ConvertJson(jsonResponseContent);
+        ClientData[] clients = ConvertJson(jsonResponseContent);
 
-        return mechanics;
+        return clients;
     }
 
     public static async Task<string> CallWebService(HttpMethod httpMethod, string webServiceUri)
@@ -62,11 +62,11 @@ public class Tests : ITestsService
         return httpResponseContent;
     }
 
-    public MechanicData[] ConvertJson(string json)
+    public ClientData[] ConvertJson(string json)
     {
-        MechanicData[] mechanics = JsonSerializer.Deserialize<MechanicData[]>(json);
+        ClientData[] clients = JsonSerializer.Deserialize<ClientData[]>(json);
 
-        return mechanics;
+        return clients;
     }
 }
 

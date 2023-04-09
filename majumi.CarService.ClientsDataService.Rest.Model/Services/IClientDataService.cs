@@ -2,9 +2,9 @@
 
 namespace majumi.CarService.ClientsDataService.Rest.Model.Services;
 
-public interface IMechanicDataService
+public interface IClientDataService
 {
-    public Mechanic GetMechanic(int mechanicID);
+    public Client GetClient(int clientID);
 
-    public Mechanic[] GetAllMechanics();
+    public Client[] GetAllClients();
 }

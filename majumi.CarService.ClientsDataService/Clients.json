@@ -1,0 +1,102 @@
+[
+  {
+    "ClientID": 1,
+    "FirstName": "Rick",
+    "LastName": "Grimes",
+    "Address": "1234 Main St, Atlanta, GA, 30303",
+    "PhoneNumber": "404-555-1234",
+    "Email": "rick.grimes@thewalkingdead.com",
+    "InsuranceCompany": "Progressive",
+    "PolicyNumber": "DEF456"
+  },
+  {
+    "ClientID": 2,
+    "FirstName": "Daryl",
+    "LastName": "Dixon",
+    "Address": "5678 Cherokee Rose St, Alexandria, VA, 22314",
+    "PhoneNumber": "703-555-5678",
+    "Email": "daryl.dixon@thewalkingdead.com",
+    "InsuranceCompany": "Crossbow",
+    "PolicyNumber": "DAF412"
+  },
+  {
+    "ClientID": 3,
+    "FirstName": "Michonne",
+    "LastName": "Hawthorne",
+    "Address": "4321 Katana Ln, Hilltop, VA, 24060",
+    "PhoneNumber": "540-555-4321",
+    "Email": "michonne@thewalkingdead.com",
+    "InsuranceCompany": "Katana",
+    "PolicyNumber": "DAF122"
+  },
+  {
+    "ClientID": 4,
+    "FirstName": "Negan",
+    "LastName": "Smith",
+    "Address": "5678 Sanctuary Ave, Washington, DC, 20001",
+    "PhoneNumber": "202-555-5555",
+    "Email": "negan@thewalkingdead.com",
+    "InsuranceCompany": "Lucille",
+    "PolicyNumber": "QAF127"
+  },
+  {
+    "ClientID": 5,
+    "FirstName": "Carol",
+    "LastName": "Peletier",
+    "Address": "9999 Flowers Rd, Kingdom, VA, 24088",
+    "PhoneNumber": "540-555-9999",
+    "Email": "carol.peletier@thewalkingdead.com",
+    "InsuranceCompany": "Cookies",
+    "PolicyNumber": "AEE251"
+  },
+  {
+    "ClientID": 6,
+    "FirstName": "Clementine",
+    "LastName": "Twdg",
+    "Address": "1234 Maple St, Savannah, Georgia, 30303",
+    "PhoneNumber": "404-555-1111",
+    "Email": "clementine.puppies@thewalkingdeadgame.com",
+    "InsuranceCompany": "Hat",
+    "PolicyNumber": "QCD176"
+  },
+  {
+    "ClientID": 7,
+    "FirstName": "Lee",
+    "LastName": "Everett",
+    "Address": "5678 Elm St, Macon, Georgia, 31201",
+    "PhoneNumber": "478-555-2222",
+    "Email": "lee.everett@thewalkingdeadgame.com",
+    "InsuranceCompany": "Hachet",
+    "PolicyNumber": "CDD112"
+  },
+  {
+    "ClientID": 8,
+    "FirstName": "Kenny",
+    "LastName": "Floridaman",
+    "Address": "9012 Oak St, Wellington, Florida, 33414",
+    "PhoneNumber": "561-555-3333",
+    "Email": "kenny.boats@thewalkingdeadgame.com",
+    "InsuranceCompany": "Boaat",
+    "PolicyNumber": "GHB397"
+  },
+  {
+    "ClientID": 9,
+    "FirstName": "Carley",
+    "LastName": "Nosurname",
+    "Address": "3456 Pine St, Atlanta, Georgia, 30318",
+    "PhoneNumber": "404-555-4444",
+    "Email": "carley.journalist@thewalkingdeadgame.com",
+    "InsuranceCompany": "Detective",
+    "PolicyNumber": "VVF312"
+  },
+  {
+    "ClientID": 10,
+    "FirstName": "Luke",
+    "LastName": "Farmboy",
+    "Address": "7890 Cedar St, Howell, Michigan, 48843",
+    "PhoneNumber": "517-555-5555",
+    "Email": "luke.farmboy@thewalkingdeadgame.com",
+    "InsuranceCompany": "Machete",
+    "PolicyNumber": "IIG359"
+  }
+]

@@ -1,24 +1,23 @@
 ﻿using majumi.CarService.ClientsDataService.Model;
 using majumi.CarService.ClientsDataService.Rest.Model.Model;
+using System.Net;
 
 namespace majumi.CarService.ClientsDataService.Rest.Model.Converters;
 
 public static class DataConverter
 {
-    public static MechanicData ConvertToMechanicData(this Mechanic mechanic)
+    public static ClientData ConvertToClientData(this Client client)
     {
-        return new MechanicData
+        return new ClientData
         {
-            MechanicID = mechanic.MechanicID,
-            Name = mechanic.Name,
-            Surname = mechanic.Surname,
-            BirthDate = mechanic.BirthDate,
-            HireDate = mechanic.HireDate,
-            Specialty = mechanic.Specialty,
-            VacationDays = mechanic.VacationDays,
-            Address = mechanic.Address,
-            Phone = mechanic.Phone,
-            Email = mechanic.Email
+            ClientID = client.ClientID,
+            FirstName = client.FirstName,
+            LastName = client.LastName,
+            Address = client.Address,
+            PhoneNumber = client.PhoneNumber,
+            Email = client.Email,
+            InsuranceCompany = client.InsuranceCompany,
+            PolicyNumber = client.PolicyNumber
         };
     }
 }
