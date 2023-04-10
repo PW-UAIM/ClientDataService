@@ -17,7 +17,7 @@ public class ClientCollection : IClientCollection
     {
         lock (ClientLock)
         {
-            return Clients.Find(mechanic => mechanic.ClientID == searchedId);
+            return Clients.Find(client => client.ClientID == searchedId);
         }
     }
 
