@@ -29,7 +29,7 @@ public class ClientDataController : ControllerBase, IClientDataService, ITestsSe
     }
 
     [HttpGet]
-    [Route("/allClients")]
+    [Route("/client/all")]
     public Client[] GetAllClients()
     {
         return clientCollection.GetAllClients();

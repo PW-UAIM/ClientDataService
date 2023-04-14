@@ -1,7 +1,11 @@
 echo off
 set url=https://localhost:5001
 
-CALL:curl_test "Dane klienta o ID 1" GET /client/1 
+CALL:curl_test "Dane klienta o ID 1" GET /client/1
+
+CALL:curl_test "Dane wszystkich klientow" GET /client/all
+
+EXIT /B 0
 
 :curl_test
 echo Nazwa testu: %~1
@@ -11,4 +15,4 @@ curl -X %~2 ^
 	 -H 'accept:application/json'
 echo:
 echo:
-pause
+EXIT /B 0
