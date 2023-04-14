@@ -7,4 +7,6 @@ public interface IClientDataService
     public Client GetClient(int clientID);
 
     public Client[] GetAllClients();
+
+    public string RunTests(string host, int port);
 }
