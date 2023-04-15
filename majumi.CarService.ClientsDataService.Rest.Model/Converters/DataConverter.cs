@@ -1,6 +1,5 @@
 ﻿using majumi.CarService.ClientsDataService.Model;
 using majumi.CarService.ClientsDataService.Rest.Model.Model;
-using System.Net;
 
 namespace majumi.CarService.ClientsDataService.Rest.Model.Converters;
 
