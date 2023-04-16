@@ -1,12 +1,11 @@
 ﻿using majumi.CarService.ClientsDataService.Model;
+using majumi.CarService.ClientsDataService.Rest.Model.Model;
+using Microsoft.AspNetCore.Mvc;
 
 namespace majumi.CarService.ClientsDataService.Rest.Model.Services;
 
 public interface IClientDataService
 {
-    public Client GetClient(int clientID);
-
-    public Client[] GetAllClients();
-
-    public string RunTests(string host, int port);
+    public ActionResult<ClientData> GetClient(int id);
+    public ActionResult<List<ClientData>> GetAllClients();
 }

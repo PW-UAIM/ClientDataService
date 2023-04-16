@@ -2,7 +2,7 @@
 
 public interface IClientCollection
 {
-    public Client? GetById(int searchedID);
-    public Client[] GetAllClients();
+    public Client? GetClientById(int clientID);
+    public List<Client> GetAllClients();
 }
 

@@ -4,6 +4,8 @@ using majumi.CarService.ClientsDataService.Logic;
 using majumi.CarService.ClientsDataService.Model.Services;
 using majumi.CarService.ClientsDataService.Rest.Model.Services;
 using majumi.CarService.ClientsDataService.Model;
+using majumi.CarService.ClientsDataService.Rest.Model.Converters;
+using majumi.CarService.ClientsDataService.Rest.Model.Model;
 
 namespace majumi.CarService.ClientsDataService.Rest.Controllers;
 
@@ -23,16 +25,25 @@ public class ClientDataController : ControllerBase, IClientDataService, ITestsSe
 
     [HttpGet]
     [Route("/client/{id:int}")]
-    public Client GetClient(int id)
+    public ActionResult<ClientData> GetClient(int id)
     {
-        return clientCollection.GetById(id);
+        Client? client = clientCollection.GetClientById(id);
+        if (client == null)
+            return NotFound();
+
+        ClientData clientData = DataConverter.ConvertToClientData(client);
+        
+        return Ok(clientData);
     }
 
     [HttpGet]
     [Route("/client/all")]
-    public Client[] GetAllClients()
+    public ActionResult<List<ClientData>> GetAllClients()
     {
-        return clientCollection.GetAllClients();
+        List<Client> clients = clientCollection.GetAllClients();
+        List<ClientData> clientData = DataConverter.ConvertToVisitDataList(clients);
+
+        return Ok(clientData);
     }
 
     [HttpGet]

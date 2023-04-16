@@ -19,4 +19,16 @@ public static class DataConverter
             PolicyNumber = client.PolicyNumber
         };
     }
+
+    public static List<ClientData> ConvertToVisitDataList(this List<Client> clients)
+    {
+        List<ClientData> clientData = new();
+
+        foreach (Client c in clients)
+        {
+            clientData.Add(ConvertToClientData(c));
+        }
+
+        return clientData;
+    }
 }
