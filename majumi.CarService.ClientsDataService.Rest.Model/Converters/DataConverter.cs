@@ -24,9 +24,9 @@ public static class DataConverter
     {
         List<ClientData> clientData = new();
 
-        foreach (Client c in clients)
+        foreach (Client client in clients)
         {
-            clientData.Add(ConvertToClientData(c));
+            clientData.Add(ConvertToClientData(client));
         }
 
         return clientData;

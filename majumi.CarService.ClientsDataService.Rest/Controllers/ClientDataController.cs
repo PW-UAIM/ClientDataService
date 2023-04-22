@@ -24,7 +24,7 @@ public class ClientDataController : ControllerBase, IClientDataService, ITestsSe
     }
 
     [HttpGet]
-    [Route("/client/{id:int}")]
+    [Route("/getClient/{id:int}")]
     public ActionResult<ClientData> GetClient(int id)
     {
         Client? client = clientCollection.GetClientById(id);
@@ -37,7 +37,7 @@ public class ClientDataController : ControllerBase, IClientDataService, ITestsSe
     }
 
     [HttpGet]
-    [Route("/client/all")]
+    [Route("/getAllClients")]
     public ActionResult<List<ClientData>> GetAllClients()
     {
         List<Client> clients = clientCollection.GetAllClients();
